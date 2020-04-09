@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.hgalli.tasks.test.TasksTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.61 s - in br.com.hgalli.tasks.test.TasksTest
