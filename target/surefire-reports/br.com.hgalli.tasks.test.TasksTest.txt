@@ -1,4 +1,30 @@
 -------------------------------------------------------------------------------
 Test set: br.com.hgalli.tasks.test.TasksTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.61 s - in br.com.hgalli.tasks.test.TasksTest
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 23.533 s <<< FAILURE! - in br.com.hgalli.tasks.test.TasksTest
+naoDeveSalvarTarefaComDataPassada(br.com.hgalli.tasks.test.TasksTest)  Time elapsed: 16.154 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+unknown error: Chrome failed to start: exited abnormally
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: '657427cff2e4', ip: '172.20.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '4.14.154-boot2docker', java.version: '1.8.0_232'
+Driver info: driver.version: unknown
+remote stacktrace: #0 0x55bc53412479 <unknown>
+
+Command duration or timeout: 14.19 seconds
+	at br.com.hgalli.tasks.test.TasksTest.acessarAplicacao(TasksTest.java:20)
+	at br.com.hgalli.tasks.test.TasksTest.naoDeveSalvarTarefaComDataPassada(TasksTest.java:97)
+Caused by: org.openqa.selenium.WebDriverException: 
+unknown error: Chrome failed to start: exited abnormally
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: '657427cff2e4', ip: '172.20.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '4.14.154-boot2docker', java.version: '1.8.0_232'
+Driver info: driver.version: unknown
+remote stacktrace: #0 0x55bc53412479 <unknown>
+
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-M44FKSV', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: unknown
+

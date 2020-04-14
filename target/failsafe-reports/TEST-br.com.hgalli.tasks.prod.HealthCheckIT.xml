@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="br.com.hgalli.tasks.test.TasksTest" time="23.533" tests="4" errors="1" skipped="0" failures="0">
+<testsuite name="br.com.hgalli.tasks.prod.HealthCheckIT" time="4.536" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
@@ -25,6 +25,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
+    <property name="skip.surefire.tests" value="true"/>
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.6.2\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
@@ -45,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_221\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher verify"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher verify -Dskip.surefire.tests"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="pt"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -64,37 +65,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="naoDeveSalvarTarefaComDataPassada" classname="br.com.hgalli.tasks.test.TasksTest" time="16.154">
-    <error message="unknown error: Chrome failed to start: exited abnormally&#10;  (unknown error: DevToolsActivePort file doesn&apos;t exist)&#10;  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;&#10;System info: host: &apos;657427cff2e4&apos;, ip: &apos;172.20.0.4&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.14.154-boot2docker&apos;, java.version: &apos;1.8.0_232&apos;&#10;Driver info: driver.version: unknown&#10;remote stacktrace: #0 0x55bc53412479 &lt;unknown&gt;&#10;&#10;Command duration or timeout: 14.19 seconds" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
-unknown error: Chrome failed to start: exited abnormally
-  (unknown error: DevToolsActivePort file doesn't exist)
-  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: '657427cff2e4', ip: '172.20.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '4.14.154-boot2docker', java.version: '1.8.0_232'
-Driver info: driver.version: unknown
-remote stacktrace: #0 0x55bc53412479 <unknown>
-
-Command duration or timeout: 14.19 seconds
-	at br.com.hgalli.tasks.test.TasksTest.acessarAplicacao(TasksTest.java:20)
-	at br.com.hgalli.tasks.test.TasksTest.naoDeveSalvarTarefaComDataPassada(TasksTest.java:97)
-Caused by: org.openqa.selenium.WebDriverException: 
-unknown error: Chrome failed to start: exited abnormally
-  (unknown error: DevToolsActivePort file doesn't exist)
-  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: '657427cff2e4', ip: '172.20.0.4', os.name: 'Linux', os.arch: 'amd64', os.version: '4.14.154-boot2docker', java.version: '1.8.0_232'
-Driver info: driver.version: unknown
-remote stacktrace: #0 0x55bc53412479 <unknown>
-
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-M44FKSV', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: driver.version: unknown
-]]></error>
-    <system-err><![CDATA[abr 14, 2020 9:24:11 AM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFORMAÇÕES: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-]]></system-err>
-  </testcase>
-  <testcase name="deveSalvarTarefaComSucesso" classname="br.com.hgalli.tasks.test.TasksTest" time="20.642"/>
-  <testcase name="naoDeveSalvarTarefaSemData" classname="br.com.hgalli.tasks.test.TasksTest" time="23.533"/>
-  <testcase name="naoDeveSalvarTarefaSemDescricao" classname="br.com.hgalli.tasks.test.TasksTest" time="14.058"/>
+  <testcase name="healthCheck" classname="br.com.hgalli.tasks.prod.HealthCheckIT" time="4.536"/>
 </testsuite>
