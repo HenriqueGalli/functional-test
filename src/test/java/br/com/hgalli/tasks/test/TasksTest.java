@@ -116,30 +116,30 @@ public class TasksTest {
 		}
 	}
 	
-	@Test
-	public void deveRemoverTarefaComSucesso() throws Exception{
-		
-		WebDriver driver = acessarAplicacao();
-		
-		try {
-		//   INSERIR TAREFA	
-		//Clicar em addTodo
-		driver.findElement(By.id("addTodo")).click();
-		driver.findElement(By.id("task")).sendKeys("Teste Funcional");
-		Thread.sleep(3000);
-		driver.findElement(By.id("dueDate")).sendKeys("01/01/2030");
-		Thread.sleep(3000);
-		driver.findElement(By.id("saveButton")).click();
-		Thread.sleep(3000);
-		String message = driver.findElement(By.id("message")).getText();
-		Assert.assertEquals("Success!",message );
-		
-		//Remover a tarefa
-		driver.findElement(By.xpath("//a[@class='btn btn-outline-danger btn-sm']")).click();
-	     message = driver.findElement(By.id("message")).getText();
-		Assert.assertEquals("Success!",message );
-		}finally {
-			driver.quit();
-		}
-	}
+//	@Test
+//	public void deveRemoverTarefaComSucesso() throws Exception{
+//		
+//		WebDriver driver = acessarAplicacao();
+//		
+//		try {
+//		//   INSERIR TAREFA	
+//		//Clicar em addTodo
+//		driver.findElement(By.id("addTodo")).click();
+//		driver.findElement(By.id("task")).sendKeys("Teste Funcional");
+//		Thread.sleep(3000);
+//		driver.findElement(By.id("dueDate")).sendKeys("01/01/2030");
+//		Thread.sleep(3000);
+//		driver.findElement(By.id("saveButton")).click();
+//		Thread.sleep(3000);
+//		String message = driver.findElement(By.id("message")).getText();
+//		Assert.assertEquals("Success!",message );
+//		
+//		//Remover a tarefa
+//		driver.findElement(By.xpath("//a[@class='btn btn-outline-danger btn-sm']")).click();
+//	    message = driver.findElement(By.id("message")).getText();
+//		Assert.assertEquals("Success!",message );
+//		}finally {
+//			driver.quit();
+//		}
+//	}
 }
